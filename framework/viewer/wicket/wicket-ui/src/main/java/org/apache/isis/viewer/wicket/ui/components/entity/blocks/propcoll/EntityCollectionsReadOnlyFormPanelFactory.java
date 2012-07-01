@@ -19,29 +19,30 @@
 
 package org.apache.isis.viewer.wicket.ui.components.entity.blocks.propcoll;
 
-import org.apache.wicket.Component;
-import org.apache.wicket.model.IModel;
-
 import org.apache.isis.viewer.wicket.model.models.EntityModel;
 import org.apache.isis.viewer.wicket.ui.ComponentFactory;
 import org.apache.isis.viewer.wicket.ui.ComponentType;
 import org.apache.isis.viewer.wicket.ui.components.entity.EntityComponentFactoryAbstract;
-import org.apache.isis.viewer.wicket.ui.components.entity.blocks.propcoll.EntityPropertiesAndOrCollectionsPanel.Render;
+import org.apache.wicket.Component;
+import org.apache.wicket.model.IModel;
 
 /**
  * {@link ComponentFactory} for {@link EntityPropertiesAndOrCollectionsPanel}.
  */
-public class EntityPropertiesPanelFactory extends EntityComponentFactoryAbstract {
+public class EntityCollectionsReadOnlyFormPanelFactory extends EntityComponentFactoryAbstract {
 
     private static final long serialVersionUID = 1L;
 
-    public EntityPropertiesPanelFactory() {
-        super(ComponentType.ENTITY_PROPERTIES);
+    public EntityCollectionsReadOnlyFormPanelFactory() {
+        super(ComponentType.ENTITY_COLLECTIONS_READ_ONLY_FORM);
     }
 
     @Override
     public Component createComponent(final String id, final IModel<?> model) {
         final EntityModel entityModel = (EntityModel) model;
-        return new EntityPropertiesAndOrCollectionsPanel(id, entityModel, Render.PROPERTIES_ONLY);
+        return new EntityCollectionsReadOnlyFormPanel(id, entityModel);
     }
 }
+
+
+

@@ -40,6 +40,7 @@ public class EntityCombinedPanel extends PanelAbstract<EntityModel> {
         final EntityModel model = getModel();
 
         addOrReplace(ComponentType.ENTITY_SUMMARY, model);
-        addOrReplace(ComponentType.ENTITY_PROPERTIES_AND_COLLECTIONS, model);
+        addOrReplace(ComponentType.ENTITY_PROPERTIES, model);
+        addOrReplace(ComponentType.ENTITY_COLLECTIONS_READ_ONLY_FORM, model);
     }
 }
